@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="my-5">
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.input :comment, label: 'Comment', label_html: {class: "form-label" }, input_html: {class: "form-control" }, placeholder: 'Bookmark comment min 6 char'%>
+          <%= f.association :movie, { class: 'form-control' }%>
+          <%= f.submit "Create", class: "btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
