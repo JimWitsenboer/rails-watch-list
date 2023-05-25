@@ -1,5 +1,20 @@
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= list.name %></li>
-  <% end %>
-</ul>
+<div class="d-flex banner justify-content-center align-items-center">
+  <div class="container">
+  <div class="row text-center">
+    <h2>All lists</h2>
+    <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <div class="cards col-md-12 mt-5 d-flex justify-content-center">
+    <% @lists.each do |list| %>
+      <div class="card text-bg-dark col-md-3 mx-2">
+        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="card-img" alt="list-image">
+      <div class="card-img-overlay">
+        <h5 class="card-title"> list.name</h5>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</div>
