@@ -1,10 +1,35 @@
 // Specific CSS for your home-page
 i {
-  font-size: 50px;
+  font-size: 26px;
 }
 
 .banner {
-  height: 350px;
-  background-image: url(https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);
-  color: rgba(255, 255, 255, 0.9);
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.remove-link-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.remove-link-decoration:hover {
+  text-decoration: none;
+  color: rgb(210, 210, 210);
 }

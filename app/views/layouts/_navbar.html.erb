@@ -1,9 +1,24 @@
-<div class="border-bottom bg-white">
-      <div class="container d-flex align-items-center justify-content-between py-2">
-        <i class="fa-solid fa-clapperboard" style="color: #dddddd;">IMDB ripoff</i>
-        <!-- turn this link into a button -->
-        <a href="#" class="btn btn-primary">
-          Login
-        </a>
-      </div>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <i class="fa-solid fa-clapperboard" style="color: #962715"></i>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", lists_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Bookmarks", lists_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Create list", new_list_path, class: "btn btn-flat"  %>
+          </li>
+      </ul>
     </div>
+  </div>
+</div>
