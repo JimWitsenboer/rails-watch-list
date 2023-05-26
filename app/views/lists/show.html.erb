@@ -1,8 +1,24 @@
-<h2><%= @list.name %></h2>
+<div class="container d-flex mt-5">
+  <div class="col-md-4">
+    <h2><%= @list.name %></h2>
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= link_to "Create bookmark", new_list_bookmark_path(@list), class: "btn btn-flat mt-3"  %>
 
-<% @list.bookmarks.each do |bookmark|  %>
-  <%= bookmark.comment %>
-  <%= link_to "Delete", bookmark_path(bookmark),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-<% end %>
+  </div>
+  <div class="col-md-8">
+    <h2>Bookmarks</h2>
+    <div class="row">
+      <% @list.bookmarks.each do |bookmark|  %>
+        <div class="card p-3 mb-3">
+        <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash position-absolute end-0 px-3" style="color: #962715"></i>
+             <% end %>
+          <p>Comment: <%= bookmark.comment %></p>
+          <ul>
+          <li><%= bookmark.movie.title %></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
